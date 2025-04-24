@@ -4,48 +4,115 @@
   <meta charset="UTF-8">
   <title>Portafolio de Melani</title>
   <style>
-    body { font-family: sans-serif; margin: 2rem; background: #f9f9f9; color: #333; }
-    h1, h2 { color: #444; }
-    a { color: #007acc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    ul { list-style: none; padding-left: 0; }
-    li { margin-bottom: 1rem; }
+    /* Variables de color */
+    :root {
+      --bg: #f0f4f8;
+      --primary: #1a73e8;
+      --text: #333;
+      --card-bg: #fff;
+      --shadow: rgba(0, 0, 0, 0.1);
+    }
+
+    /* Reset y tipografía */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      font-family: 'Segoe UI', sans-serif; 
+      background: var(--bg); 
+      color: var(--text); 
+      line-height: 1.6; 
+      padding: 2rem; 
+    }
+
+    h1, h2 { margin-bottom: 1rem; }
+    h1 { color: var(--primary); font-size: 2.5rem; }
+    h2 { color: #444; font-size: 1.8rem; margin-top: 2rem; }
+
+    /* Tarjetas de proyecto */
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .card {
+      background: var(--card-bg);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px var(--shadow);
+      padding: 1rem;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: translateY(-4px);
+    }
+    .card h3 {
+      margin: .5rem 0;
+      color: var(--primary);
+    }
+    .card p {
+      font-size: .95rem;
+      margin-bottom: .75rem;
+    }
+    .card a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .card a:hover {
+      text-decoration: underline;
+    }
+
+    /* Pie de página */
+    footer {
+      text-align: center;
+      margin-top: 3rem;
+      font-size: .9rem;
+      color: #555;
+    }
+    footer a { color: var(--primary); } 
   </style>
 </head>
 <body>
-  <h1>Portafolio de Melani</h1>
-  <p>Front-end Developer jr, entusiasta de la tecnología y soluciones digitales eficientes.</p>
+  <header>
+    <h1>Portafolio de Melani</h1>
+    <p>Front-end Developer jr &amp; entusiasta de tecnología</p>
+  </header>
 
-  <h2>Proyectos Web</h2>
-  <ul>
-    <li>
-      <a href="https://github.com/Mel-Tanuki/Inscripcion-Web" target="_blank">
-        Proceso de inscripción DAE UAEH – HTML, CSS, JS
-      </a>
-    </li>
-  </ul>
+  <section>
+    <h2>Proyectos Web</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>DAE Proceso de Inscripción Web</h3>
+        <p>Página con el proceso de inscripción para el alumnado de la UAEH usando HTML, CSS y JavaScript.</p>
+        <a href="https://github.com/TU_USUARIO/Inscripcion-Web" target="_blank">Ver en GitHub →</a>
+      </div>
+    </div>
+  </section>
 
-  <h2>Proyectos Arduino</h2>
-  <ul>
-    <li>
-      <a href="https://github.com/Mel-Tanuki/Sistema-Aparcamiento-Arduino" target="_blank">
-        Sistema de distancia – Arduino
-      </a>
-    </li>
-  </ul>
+  <section>
+    <h2>Proyectos Arduino</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Sistema de Aparcamiento</h3>
+        <p>Control de distancia y gestión de espacios con Arduino.</p>
+        <a href="https://github.com/TU_USUARIO/Sistema-Aparcamiento-Arduino" target="_blank">Ver en GitHub →</a>
+      </div>
+    </div>
+  </section>
 
-  <h2>Proyectos Python</h2>
-  <ul>
-    <li>
-      <a href="https://github.com/Mel-Tanuki/AdivinaNumero-Python" target="_blank">
-        Adivina el Número – Python
-      </a>
-    </li>
-  </ul>
+  <section>
+    <h2>Proyectos Python</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Adivina el Número</h3>
+        <p>Juego interactivo en Python donde el usuario debe adivinar un número aleatorio.</p>
+        <a href="https://github.com/TU_USUARIO/AdivinaNumero-Python" target="_blank">Ver en GitHub →</a>
+      </div>
+    </div>
+  </section>
 
   <footer>
-    <hr>
-    <p>Contacto: mel500lara@gmail.com | <a href="www.linkedin.com/in/melani-lara-907b26343">LinkedIn</a></p>
+    <p>Contacto: <a href="mailto:mel500lara@gmail.com">mel500lara@gmail.com</a> | 
+       <a href="https://www.linkedin.com/in/melani-lara-907b26343/" target="_blank">LinkedIn</a></p>
   </footer>
 </body>
 </html>
